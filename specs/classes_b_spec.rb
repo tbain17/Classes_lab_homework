@@ -19,4 +19,17 @@ class TestSportTeam < Minitest::Test
         ], sport_team.players)
       assert_equal("CoachBob", sport_team.coach)
 end
+
+def test_change_coach_name
+  sport_team = SportTeam.new("The Wasps", [
+    "Bobby",
+    "Lightening",
+    "Jake"
+    ], "CoachBob")
+    sport_team.coach = "Coach Bob II"
+    assert_equal("Coach Bob II", sport_team.coach)
+end
+
+
+
 end
