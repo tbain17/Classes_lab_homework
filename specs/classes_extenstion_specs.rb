@@ -43,4 +43,13 @@ def test_find_book__book_not_found
   assert_nil(library_book.find_book("How to farm potatoes"))
 end
 
+def test_find_book_rental_info
+  library_book = Library.new(@books)
+  assert_equal(@books[1][:rental_details], library_book.find_book_info("My Little Pony"))
+end
+
+def test_find_book_rental_info__not_found
+  library_book = Library.new(@books)
+  assert_nil(library_book.find_book_info("Cooking in Prison"))
+end
 end
