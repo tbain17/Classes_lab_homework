@@ -17,4 +17,9 @@ def test_change_student_details
   assert_equal("Potato", student.name)
   assert_equal("D6", student.cohort)
 end
+
+def test_student_chat
+  student = Student.new("David", "C2")
+  assert_equal("I can talk!", student.student_chat)
+end
 end

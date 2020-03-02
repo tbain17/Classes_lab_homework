@@ -7,5 +7,7 @@ attr_accessor :name, :cohort
     @cohort = cohort
   end
 
-
+  def student_chat()
+    return "I can talk!"
+  end
 end
