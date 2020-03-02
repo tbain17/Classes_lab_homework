@@ -1,10 +1,11 @@
 class Student
-attr_reader :name
+attr_accessor :name, :cohort
+
 
   def initialize(name, cohort)
     @name = name
     @cohort = cohort
   end
 
-  
+
 end
