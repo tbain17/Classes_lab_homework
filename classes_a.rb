@@ -10,4 +10,8 @@ attr_accessor :name, :cohort
   def student_chat()
     return "I can talk!"
   end
+
+  def say_favourite_language(favourite)
+    return "I love #{favourite}"
+  end
 end
