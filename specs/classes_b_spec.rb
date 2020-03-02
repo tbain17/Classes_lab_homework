@@ -45,4 +45,22 @@ def test_add_new_player
       ], sport_team.players)
 end
 
+def test_find_player__player_found
+  sport_team = SportTeam.new("The Wasps", [
+    "Bobby",
+    "Lightening",
+    "Jake"
+    ], "CoachBob")
+    assert_equal("Jake",sport_team.find_player("Jake"))
+  end
+
+  def test_find_player__player_not_found
+    sport_team = SportTeam.new("The Wasps", [
+      "Bobby",
+      "Lightening",
+      "Jake"
+      ], "CoachBob")
+      assert_nil(sport_team.find_player("Potato"))
+  end
+
 end
