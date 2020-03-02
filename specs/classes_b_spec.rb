@@ -11,46 +11,46 @@ class TestSportTeam < Minitest::Test
       "Lightening",
       "Jake"
       ], "CoachBob")
-      assert_equal("The Wasps", sport_team.name)
-      assert_equal([
+    assert_equal("The Wasps", sport_team.name)
+    assert_equal([
         "Bobby",
         "Lightening",
         "Jake"
         ], sport_team.players)
-      assert_equal("CoachBob", sport_team.coach)
-end
+    assert_equal("CoachBob", sport_team.coach)
+  end
 
-def test_change_coach_name
-  sport_team = SportTeam.new("The Wasps", [
-    "Bobby",
-    "Lightening",
-    "Jake"
+  def test_change_coach_name
+    sport_team = SportTeam.new("The Wasps", [
+      "Bobby",
+      "Lightening",
+      "Jake"
     ], "CoachBob")
     sport_team.coach = "Coach Bob II"
     assert_equal("Coach Bob II", sport_team.coach)
-end
+  end
 
-def test_add_new_player
-  sport_team = SportTeam.new("The Wasps", [
-    "Bobby",
-    "Lightening",
-    "Jake"
-    ], "CoachBob")
+  def test_add_new_player
+    sport_team = SportTeam.new("The Wasps", [
+      "Bobby",
+      "Lightening",
+      "Jake"
+      ], "CoachBob")
     sport_team.add_new_player("Mr Potato Head")
     assert_equal([
       "Bobby",
       "Lightening",
       "Jake",
       "Mr Potato Head"
-      ], sport_team.players)
-end
+    ], sport_team.players)
+  end
 
-def test_find_player__player_found
-  sport_team = SportTeam.new("The Wasps", [
-    "Bobby",
-    "Lightening",
-    "Jake"
-    ], "CoachBob")
+  def test_find_player__player_found
+    sport_team = SportTeam.new("The Wasps", [
+      "Bobby",
+      "Lightening",
+      "Jake"
+      ], "CoachBob")
     assert_equal("Jake",sport_team.find_player("Jake"))
   end
 
