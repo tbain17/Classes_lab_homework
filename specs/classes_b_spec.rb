@@ -30,6 +30,19 @@ def test_change_coach_name
     assert_equal("Coach Bob II", sport_team.coach)
 end
 
-
+def test_add_new_player
+  sport_team = SportTeam.new("The Wasps", [
+    "Bobby",
+    "Lightening",
+    "Jake"
+    ], "CoachBob")
+    sport_team.add_new_player("Mr Potato Head")
+    assert_equal([
+      "Bobby",
+      "Lightening",
+      "Jake",
+      "Mr Potato Head"
+      ], sport_team.players)
+end
 
 end
