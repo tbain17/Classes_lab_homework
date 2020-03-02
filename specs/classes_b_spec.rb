@@ -63,4 +63,24 @@ def test_find_player__player_found
       assert_nil(sport_team.find_player("Potato"))
   end
 
+  def test_add_points__win
+    sport_team = SportTeam.new("The Wasps", [
+      "Bobby",
+      "Lightening",
+      "Jake"
+      ], "CoachBob")
+      sport_team.add_points("Win")
+      assert_equal(1, sport_team.points)
+  end
+
+  def test_add_points__lost
+    sport_team = SportTeam.new("The Wasps", [
+      "Bobby",
+      "Lightening",
+      "Jake"
+      ], "CoachBob")
+      sport_team.add_points("Loss")
+      assert_equal(0, sport_team.points)
+  end
+
 end
